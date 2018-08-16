@@ -1,0 +1,95 @@
+{% extends 'temp.html' %}
+
+{% block content %}
+
+
+{% load staticfiles%}
+
+<div class="container-fluid position-relative p-0 m-0">
+        <div class="position-absolute background-bar"></div>
+        
+        <div class="card shadow-lg bg-white rounded pt-4 pb-4 mb-5 position-absolute content">
+            <div class="container-fluid">
+                
+                <div class="row justify-content-center mb-5">
+                        <img alt="Logo" class="rounded-circle logo" src="{%static 'img/logo.png' %}">
+                </div>
+                
+                <div class="row row-element vid-row">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="embed-responsive embed-responsive-16by9 col-sm-10 col-md-7">
+                                <iframe class="embed-responsive-item" src="{{data.embed_video_url}}" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row row-element">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <div class="rounded-circle m-auto icon-circle text-center"><i class="fas fa-question icon"></i></div>
+                            </div>
+                            <div class="col-7">
+                                <h3>Who we are?</h3>
+                                <p>{{data.about}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="row row-element">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-7">
+                                <h3>Our mission</h3>
+                                <p>{{data.mission}}</p>
+                            </div>
+                            <div class="col-4">
+                                <div class="rounded-circle m-auto icon-circle text-center"><i class="fas fa-rocket icon"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row row-element">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <div class="rounded-circle m-auto icon-circle text-center"><i class="fas fa-road icon"></i></div>
+                            </div>
+                            <div class="col-7">
+                                <h3>Our Vision</h3>
+                                <p>{{data.vision}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row row-element social-icons">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col m-auto">
+                                <div class="rounded-circle m-auto icon-circle text-center"><a href="#"><i class="fab fa-facebook-f icon"></i> </a> </div>
+                            </div>
+                            <div class="col">
+                                <div class="rounded-circle m-auto icon-circle text-center"><a href="#"><i class="fab fa-twitter icon"></i></a></div>
+                            </div>
+                            <div class="col">
+                                <div class="rounded-circle m-auto icon-circle text-center"><a href="#"><i class="fab fa-youtube icon"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div style="hight:200px;"></div>
+                
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
